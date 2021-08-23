@@ -17,6 +17,7 @@
     - Bit manipulations
     - GPIO
 * [Week 6:](week6/week6.md) FreeRTOS
+* [Interview Preparation](interview-prep/README.md)
 ## Conducted by
 - [Sravan Chittupalli](https://github.com/SravanChittupalli)
 - [Vedant Paranjape](https://github.com/VedantParanjape)
