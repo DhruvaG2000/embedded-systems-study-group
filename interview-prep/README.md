@@ -1,6 +1,6 @@
 # Interview Preparation for Embedded Systems
 
-## Computer Architecture
+## Basics of Computer Architecture
 
 CPU needs it’s own “memory” called Registers.<br>
 Registers are small, very fast circuits that store intermediate
@@ -13,7 +13,7 @@ There are many small units, but the four most important ones are the following:<
 
 **Relationship between MAR & MDR:** The MAR gives the address the data of the MDR will be _read_ from or _written_ to.
 
-## Connections between RAM & CPU
+**Connections between RAM & CPU**
 
 - **Control Bus**
 - **Address Bus**
