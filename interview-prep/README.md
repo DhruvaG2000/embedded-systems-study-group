@@ -1,5 +1,35 @@
 # Interview Preparation for Embedded Systems
 
+## C Programming
+
+**Bitwise operators:**  ``|`` , ``&``, ``^``
+refer [this](https://medium.com/techie-delight/bit-manipulation-interview-questions-and-practice-problems-27c0e71412e7) and a few examples are present on the [git repo](https://github.com/DhruvaG2000/embedded-systems-study-group/tree/master/interview-prep/c-programs).
+
+**Compiler options** <br>
+Specify the Output Executable Name
+``gcc hello.c -o hello.out`` <br>
+Enable all warnings set through ``-Wall`` option<br>
+Produce only the preprocessor output with ``-E`` option<br>
+Produce only the assembly code using ``-S`` option <br>
+Produce only the compiled code using the ``-C`` option<br>
+Produce all the intermediate files using ``-save-temps`` function.<br> _NOTE:_ Through this option, output at all the stages of compilation is stored in the current directory. Please note that this option produces the executable also.<br>
+Link with shared libraries using ``-l`` option<br>
+The flag mentioned above links the code with the desired shared library ``libXXX.so``<br>
+Create position independent code using ``-fPIC`` option.
+position-independent code executes properly regardless of its absolute address.<br>
+
+**extern:** Extern is a keyword in C programming language which is used to declare a global variable that is a variable without any memory assigned to it.<br>
+```c
+extern <data_type> <variable_name>;
+// or
+extern <return_type> <function_name>(<parameter_list>);
+```
+
+**Pointers**<br>
+pointers and integers are not interchangeable, _but_ *Zero* is the sole exception.  
+
+
+---
 ## Basics of Computer Architecture
 
 CPU needs it’s own “memory” called Registers.<br>
@@ -29,3 +59,5 @@ needs to access the much slower RAM less frequently.
 ## Resources
 - [Embedded Cheat Sheet](https://docs.google.com/spreadsheets/d/1vXeF-v_mIbnhHQ6Fucws3uBZuSrs6Aa6INtFjsQQweM/edit?usp=sharing)
 - [Espressif Systems Interview Experience](https://docs.google.com/document/d/17qRWjSu_LBQzpollnHfa5jAIGB5WApTS756tfdDWuLM/edit?usp=sharing)
+- [extern in c](https://iq.opengenus.org/extern-in-c/)
+- [how to C libraries](https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_C_libraries.html)
