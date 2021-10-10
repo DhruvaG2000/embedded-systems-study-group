@@ -32,6 +32,18 @@ pointers and integers are not interchangeable, _but_ *Zero* is the sole exceptio
 ---
 ## Basics of Computer Architecture
 
+**ELinux Boot process**<br>
+
+![](bootFlow.png)
+
+- SoC powered up and starts executing at the _reset vector_.
+- The SoC ROM bootloader loads the first stage of Bootloader which then copies the 2nd stage of bootloader to the RAM and passes control to it.
+- This 2nd stage mainly loads the kernel and device tree into the RAM.
+- Then it sets up kernel boot args and then passes control to the kernel which then inits itself and hardware devices.
+- The kernel locates the ``/`` fs and mounts it.
+- Kernel runs the init process PID0 to start user space.
+- This init process then spawns other user space processes based on it's config.
+
 CPU needs it’s own “memory” called Registers.<br>
 Registers are small, very fast circuits that store intermediate
 values from calculations or instructions inside the CPU.<br>
@@ -55,6 +67,22 @@ needs to access the much slower RAM less frequently.
 **Machine Instruction Cycle:**
 
 ![](MachineInstructionCycle.png)
+
+---
+## Basics of Operating System
+
+**The Role of the Device Driver:**
+
+***Misc notes:***
+potential questions for interview:<br>
+Comp. arch. :-
+1. Why bootloader is needed to load kernel, complete process.
+2. diff general purpose OS and embedded os.
+3. why embedded linux is different.
+
+OS :-
+1. scheduler.
+2. how drivers are written
 
 ## Resources
 - [Embedded Cheat Sheet](https://docs.google.com/spreadsheets/d/1vXeF-v_mIbnhHQ6Fucws3uBZuSrs6Aa6INtFjsQQweM/edit?usp=sharing)
